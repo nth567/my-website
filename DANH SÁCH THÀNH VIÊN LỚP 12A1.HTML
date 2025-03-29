@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANH SÁCH THÀNH VIÊN 12A1</title>
+    <style>
+	* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 75%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    background: #333;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .search-box {
+            margin-bottom: 20px;
+        }
+        .student-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .student-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        .student-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+       
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;margin-top: 20px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+     <nav>
+	 <div class="menu">
+	   <ul>
+	   <li><a href="index2_updated(1).html"> Trang chủ</a></li>
+	   <li><a href="#hoat-dong-noi-bat"> Hoạt động nổi bật</a></li>
+	   <li><a href="#giao-vien-chu-nhiem"> Giáo viên chủ nhiệm</a></li>
+	   <li><a href="DANH SÁCH THÀNH VIÊN LỚP 12A1.HTML">Thành viên</a></li>
+	   <li><a href="#so-do-lop"> Sơ đồ lớp</a></li>
+	   <li><a href="#lien-he"> Liên hệ</a></li>
+	   </ul>
+        </div>
+     </nav>
+         <img src="https://scontent.fsgn3-1.fna.fbcdn.net/v/t39.30808-6/487487676_122156962256369641_8436223372972932981_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=-qbL6VpQ0x8Q7kNvgHZCgWu&_nc_oc=AdkihWhTNZumEetowdqa_8vZjcNzTswVWxcTsCYcGEZxWcIbdAS3tMoc0kMydIDe9oY&_nc_zt=23&_nc_ht=scontent.fsgn3-1.fna&_nc_gid=zeK-fBKe6JHI09XuArzvTw&oh=00_AYFGqr66VtYTO-dGIPfCjEdleHj5udQNHepk_5GicDKEEw&oe=67EC96D9"alt=""></div>
+    <h1> DANH SÁCH THÀNH VIÊN LỚP 12A1 </h1>
+    <input type="text" id="search" class="search-box" placeholder="Tìm kiếm..." onkeyup="searchStudents()">
+    <div class="student-list" id="studentList"></div>
+
+    <script>
+        const students = [
+             { 
+                name: " HUỲNH NGỌC MẪN  ", 
+                image: "https://scontent.fsgn3-1.fna.fbcdn.net/v/t39.30808-6/487545228_122156959346369641_5622223146359607066_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=moR4bQWUJ_0Q7kNvgEPI1aZ&_nc_oc=Adkp8L3E96pelpp56muHp_0W0e2_V0SdffgNKsLQshWA-sMeilsWx47K7S63mcbEgyI&_nc_zt=23&_nc_ht=scontent.fsgn3-1.fna&_nc_gid=jGuo-y1GAxcqbMZ6SmJOfA&oh=00_AYFOJDkNx0Q7_KpqQPDloSxvkXtUt5WRl-R04Y4qCl3y3Q&oe=67ED5E49", 
+                date:"<strong>Sinh ngày:</strong>15/6/2007", 
+                phone: "<strong>SĐT:</strong>0869944212",				
+                email:"<strong>Email:</strong>hnman2007＠gmail.com ", 
+			   description:"<strong>Chức vụ :</strong>lớp phó học tập"
+            },
+            { 
+                name: "PHAN NGỌC KHƯƠNG   ", 
+                image: "https://scontent.fsgn24-1.fna.fbcdn.net/v/t39.30808-6/487308391_122156959454369641_2633940856342653291_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=HZNM-rfC0TUQ7kNvgEm8Qtg&_nc_oc=AdkcPa0za8EOeKfpJADyN6v2JFsomxaZeEITo_IWcUfv59XRQjPwSUesqnImDWe3X-s&_nc_zt=23&_nc_ht=scontent.fsgn24-1.fna&_nc_gid=T2LN_5HGtduZDhjpjBTBzQ&oh=00_AYHGSH5mWCUUChkdSgka2umWCEcqd5_dYTsomdqvHnUbYw&oe=67ED6A2E", 
+                date:"<strong>Sinh ngày:</strong>9/1/2007", 
+                phone: "<strong>SĐT:</strong>0562097283",				
+                email:"<strong>Email:</strong>khuongngoc404＠gmail.com", 
+			   description:" <strong> Chức vụ :</strong>tổ viên"
+            },
+            { 
+                name: "ĐINH THANH HIỀN   ", 
+                image: "https://scontent.fsgn13-1.fna.fbcdn.net/v/t39.30808-6/487479661_122156959514369641_5528601056605663990_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=FO2PzsP6ikUQ7kNvgHd49RO&_nc_oc=Adktj1rltDACsGQW2hh6NhvEJNs6_5JWW6MfbU2PKrVaWzT4kREhQWUj0e2pI5aDhno&_nc_zt=23&_nc_ht=scontent.fsgn13-1.fna&_nc_gid=J8V3M14JAGgTDc0mGJOw7Q&oh=00_AYF_bW3TSM8OBXuYzIuoTJjcP04lULLXDPx5SjGElwchrw&oe=67ED586B", 
+                date:"<strong>Sinh ngày:</strong>20/12/2007", 
+                phone: "<strong>SĐT:</strong>0792506849",				
+                email:"<strong>Email:</strong>hiendinhthanh6＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			
+			 { 
+                name: "NGUYỄN NGỌC GIA HÂN   ", 
+                image: "https://scontent.fsgn3-1.fna.fbcdn.net/v/t39.30808-6/487415937_122156959550369641_8814876898770806308_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=7MRhmYsRlWQQ7kNvgHfqlhc&_nc_oc=AdlgfY_CdziKCaZjdJ_hnt77ScWFHfbDwiiLFj-MfeWCCqnTCPXMox9-xd83a_tGp90&_nc_zt=23&_nc_ht=scontent.fsgn3-1.fna&_nc_gid=gM0j2vkL3vzDLZjI1FUhTg&oh=00_AYFHCvLwmNrw-wLCQKGzpreOrvR4F5-yFFfIOYUYvgg_jg&oe=67ED4EB3", 
+                date:"<strong>Sinh ngày:</strong>2/2/2007", 
+                phone: "<strong>SĐT:</strong>0856828978",				
+                email:"<strong>Email:</strong>nguyenngocgiahan222007＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            }, 
+			{ 
+                name: "NGUYỄN PHẠM VÂN ANH   ", 
+                image: "https://scontent.fsgn24-2.fna.fbcdn.net/v/t39.30808-6/487308685_122156959622369641_3626276600430377934_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=nTSRS26yR4YQ7kNvgHPju8R&_nc_oc=AdlI_1hKT7EyXmhm-7JKAekGta-9Q0n5YBcveXsHUvlH9i2i_kwQ_T5wWfwx7NlHCy4&_nc_zt=23&_nc_ht=scontent.fsgn24-2.fna&_nc_gid=bL6SFuPSuTI25UC0vPGe_w&oh=00_AYHHbl-D-0xOva5FxcbHDciqgBg17xkclYVIdF_JhhdC4g&oe=67ED78F0", 
+                date:"<strong>Sinh ngày:</strong>12/9/2007", 
+                phone: "<strong>SĐT:</strong>0939803507",				
+                email:"<strong>Email:</strong>nguyenphamvananh2007＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " NGUYỄN KIM NGÂN  ", 
+                image: "https://scontent.fsgn13-1.fna.fbcdn.net/v/t39.30808-6/486593927_122156959664369641_1702593010702290494_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zYOz6tJYHp4Q7kNvgHF0W0m&_nc_oc=AdmLGjdlgRSUxloyTjiaWlJAgts2h0FXGOKFm7l9Wod6qb4U2iloqC8_-GFghQch26w&_nc_zt=23&_nc_ht=scontent.fsgn13-1.fna&_nc_gid=KeCWhrNOjpO5QwUJWIlwPQ&oh=00_AYHUkT0tLjjLsTDNLO9IvnPSTdnDqRTEtN0JLjArnxGNPw&oe=67ED56EA", 
+                date:"<strong>Sinh ngày:</strong>15/6/2007", 
+                phone: "<strong>SĐT:</strong>0704852569",				
+                email:"<strong>Email:</strong>nguyenkimngan8759＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " HÀ THỊ YẾN THƠ  ", 
+                image: "https://scontent.fsgn24-1.fna.fbcdn.net/v/t39.30808-6/487143205_122156959712369641_5137528770176937956_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=3xSVmoV0RAgQ7kNvgE9xu7i&_nc_oc=Adl_AW2KZiFEt5DjSjWBnVlTaVacgmV2xjgl06Y-dn20mzGHiHBilwMcbqLwuU1a7M0&_nc_zt=23&_nc_ht=scontent.fsgn24-1.fna&_nc_gid=BioJPks-a0fwDmJT5CIAQQ&oh=00_AYHeqQ0mKEAToPuIrzMaU5FnTsPMpqAM-jyN25y7_xkYQg&oe=67ED58D4", 
+                date:"<strong>Sinh ngày:</strong>11/11/2007", 
+                phone: "<strong>SĐT:</strong>0704941719",				
+                email:"<strong>Email:</strong>hatho123489＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },{ 
+                name: " VÕ NGỌC YẾN NHI ", 
+                image: "https://scontent.fsgn13-2.fna.fbcdn.net/v/t39.30808-6/487386706_122156959796369641_755604653188154634_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ypNz7BdGaXIQ7kNvgFc0rCX&_nc_oc=AdkBDj81w97yXahMjGaPx9pvR-h3SfNAmD7wRTY55m0o6-w-l1fm-LbmpmdTDe2Fugo&_nc_zt=23&_nc_ht=scontent.fsgn13-2.fna&_nc_gid=TPMgatnZZgWoJLqzx2lFDg&oh=00_AYGoh2UfubZ0YwUWTibPp03oNGbGcgmSJJluL6-pxXqohQ&oe=67ED5F45", 
+                date:"<strong>Sinh ngày:</strong>31/1/2007", 
+                phone: "<strong>SĐT:</strong>0704866658",				
+                email:"<strong>Email:</strong>vongocyennhi3101＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },{ 
+                name: " DIỆC HOÀN HẢO  ", 
+                image: "https://scontent.fsgn13-2.fna.fbcdn.net/v/t39.30808-6/487158687_122156959856369641_1837200350245794100_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kVVeKIjFO5MQ7kNvgHYNied&_nc_oc=AdmBz0tcMD70xSjWfwrmdGnH4QlMwkUWGguC7xdyyV27BZtz82XCBGBPqt8QGpnELCY&_nc_zt=23&_nc_ht=scontent.fsgn13-2.fna&_nc_gid=1qinBAIgG8_mEDA7tuxBBw&oh=00_AYHcZhJBaXMuLhLFlB9qp3FInhOzAVlT53Sjk2br9sRtpg&oe=67ED5E20", 
+                date:"<strong>Sinh ngày:</strong>21/8/2007", 
+                phone: "<strong>SĐT:</strong>0907592981",				
+                email:"<strong>Email:</strong>diechoanhao＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },{ 
+                name: " NGUYỄN NGỌC YẾN OANH  ", 
+                image: "https://scontent.fsgn13-1.fna.fbcdn.net/v/t39.30808-6/487484498_122156959916369641_1668090642157594249_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Oe2HpHoT8-MQ7kNvgEw3V0J&_nc_oc=AdnM0xupu621r2ClXTnMkXoWTgh2sSmEsrG9ifzpnpvlnocL1haJaIa1cofmxUCESrM&_nc_zt=23&_nc_ht=scontent.fsgn13-1.fna&_nc_gid=BeJMncXFzOvbEKKUPdnxRA&oh=00_AYFxUTZTHhTFt1MhYu56oXQ38Z5s9sSpHA9pi4eePU5PiA&oe=67ED43D5", 
+                date:"<strong>Sinh ngày:</strong>16/1/2007", 
+                phone: "<strong>SĐT:</strong>0342723701",				
+                email:"<strong>Email:</strong>nguyenoanh1611997＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " PHẠM NGỌC LINH PHƯƠNG ", 
+                image: "https://scontent.fsgn13-1.fna.fbcdn.net/v/t39.30808-6/486685691_122156959988369641_1145043362711370380_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=ByHxTdc0cSAQ7kNvgE70Z0k&_nc_oc=Adm9muB9sc_qrqNQRdKG26iqdInaWuDAaagln98CMOu30q_QjfKjuYwt1FupLWI2kBs&_nc_zt=23&_nc_ht=scontent.fsgn13-1.fna&_nc_gid=mluQ7CYBv3Z2FF82HJ8tlQ&oh=00_AYGutlXjAGohVnRBI-_9fRj_fqvsHIl2KpbDpsY4TPMfoA&oe=67ED6EA6", 
+                date:"<strong>Sinh ngày:</strong>10/12/2007", 
+                phone: "<strong>SĐT:</strong>0346462068",				
+                email:"<strong>Email:</strong>phamngoclinhphuong2007＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " PHAN HỒNG NGÂN  ", 
+                image: "https://scontent.fsgn24-2.fna.fbcdn.net/v/t39.30808-6/486620256_122156959982369641_4986951721355718655_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=AXEarRL8q8UQ7kNvgFf6oNH&_nc_oc=AdmBdaMo6fOcntMVvY7Hbx2Hdm6d4LaWsSOObRbPCqclYBi_a3rxCIbnrH9mRKMg6uA&_nc_zt=23&_nc_ht=scontent.fsgn24-2.fna&_nc_gid=npOTalipzJr1Xj0nzsIxPg&oh=00_AYFPBR2W5yDtwV64uWhqSrEgMqvvuScwdS3MPGtwl2ArcQ&oe=67ED72DA", 
+                date:"<strong>Sinh ngày:</strong>9/6/2007", 
+                phone: "<strong>SĐT:</strong>0768818291",				
+                email:"<strong>Email:</strong>phanhongngan0906＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " LÊ NGỌC TƯỜNG VY  ", 
+                image: "https://scontent.fsgn24-2.fna.fbcdn.net/v/t39.30808-6/486679468_122156960054369641_5037241935032106992_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=PRIaGdQzlAoQ7kNvgHPvS8f&_nc_oc=AdmGNJ23Jb-0UFZ5WESOca9wLIerPp0-uVJ3eas4c8EKMapjf43nkI7KYL39Nrx2W8k&_nc_zt=23&_nc_ht=scontent.fsgn24-2.fna&_nc_gid=bmTZmL15L37EdJveikL22g&oh=00_AYFNZNYcJ8o6esVTG5o1CBE-XhW-W10GDL_xI0ttmJYjdw&oe=67ED50D2", 
+                date:"<strong>Sinh ngày:</strong>16/10/2007", 
+                phone: "<strong>SĐT:</strong>0797135336",				
+                email:"<strong>Email:</strong>lengoctuongvy16102007＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " LÊ NGUYỄN QUỲNH TRÂM  ", 
+                image: "https://scontent.fsgn13-1.fna.fbcdn.net/v/t39.30808-6/486621508_122156960132369641_6188440937675539440_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=kBaqrmTmMyAQ7kNvgEDMbbt&_nc_oc=AdmWXG37NSw7PEX9JBYGMy_pUwbb0SkTBKDGvJeQ5_9YNQYOBWRs5DJSNyxDlaZZw9k&_nc_zt=23&_nc_ht=scontent.fsgn13-1.fna&_nc_gid=ktSrtqPRRMe2KwuCVfyxtg&oh=00_AYHd3t_eRlRLxocM0AJJRf9_E3wG1LVzL68fBsEMNZSDfw&oe=67ED46D4", 
+                date:"<strong>Sinh ngày:</strong>13/1/2007", 
+                phone: "<strong>SĐT:</strong>0984253560",				
+                email:"<strong>Email:</strong>quynhtram130107＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " NGUYỄN NGỌC NHƯ Ý  ", 
+                image: "https://scontent.fsgn4-1.fna.fbcdn.net/v/t39.30808-6/486968100_122156960162369641_2651645408149610084_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=cE5wWSUbJaUQ7kNvgG7QgMu&_nc_oc=Adk9t52Ug1HnopG7YYSrhKbtbUUWqIDTa_NiWZJ0AtFa3WppqJ0LjGkx3W1vgK3kgUc&_nc_zt=23&_nc_ht=scontent.fsgn4-1.fna&_nc_gid=0s0Hl6QZatA69IdDqJen3w&oh=00_AYF_I0w_ST0dOyc2RGvjfFAddC8Lhme8zPl4GU7nXoWJnw&oe=67ED5ED5", 
+                date:"<strong>Sinh ngày:</strong>20/7/2007", 
+                phone: "<strong>SĐT:</strong>0907158062",				
+                email:"<strong>Email:</strong>nguyenngocnhuy20072007＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " DƯƠNG QUỲNH NHƯ  ", 
+                image: "https://scontent.fsgn24-2.fna.fbcdn.net/v/t39.30808-6/487410600_122156960240369641_5588175962659892103_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=POPi0GONGekQ7kNvgGBMRIi&_nc_oc=Adlbxjuhah0bZwQG-iB8ktfko-05KGKruZ7fNsAJ3wlXJechf9nRkVM0tsjaoMtSz8Q&_nc_zt=23&_nc_ht=scontent.fsgn24-2.fna&_nc_gid=hwt-hQzCEjzrbUVwMaN5DA&oh=00_AYGJyNanR0ck_YEY6foxfF5HNCPjX-DpPXMrdpN6Pza-SQ&oe=67ED6E5C", 
+                date:"<strong>Sinh ngày:</strong>1/1/2007", 
+                phone: "<strong>SĐT:</strong>0915293307",				
+                email:"<strong>Email:</strong>qnhu01012007＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " NGUYỄN THỊ HỒNG THƠ  ", 
+                image: "https://scontent.fsgn24-2.fna.fbcdn.net/v/t39.30808-6/486695877_122156960294369641_1772343519920259912_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=l-gDQceivNoQ7kNvgHJdFLw&_nc_oc=AdmuC_vFr55j3nCezVfxUsHbY8ENjJlWZMYtL3KCSZv5CpACahYqdTqCJXQsBeR-98k&_nc_zt=23&_nc_ht=scontent.fsgn24-2.fna&_nc_gid=vjoSXFtfY-uhosND6uuLFg&oh=00_AYGVuEqjiTIMOPGSbocTRtcY_HpOvwvidToSO5Q0XIhDmw&oe=67ED4AEA", 
+                date:"<strong>Sinh ngày:</strong>21/11/2007", 
+                phone: "<strong>SĐT:</strong>0769308243",				
+                email:"<strong>Email:</strong>nguyenthihongtho44＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " DƯƠNG HUỲNH NGỌC TÚ  ", 
+                image: "https://scontent.fsgn13-2.fna.fbcdn.net/v/t39.30808-6/486769209_122156960366369641_765548470280277961_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=5WZ7yKEXnloQ7kNvgG_iIa_&_nc_oc=Adk8iTYr68ByZE_R-7s_SxXA9yObNj0LdZ7ta59LGZagVAwWrInx5GD7JVdyAwlvrJo&_nc_zt=23&_nc_ht=scontent.fsgn13-2.fna&_nc_gid=J8FyCbFUYk4vrLyJPkdOPA&oh=00_AYFROxkYVzglq-heZukXVRF51E2B1gQh9WWJa_RW5jGakA&oe=67ED75EC", 
+                date:"<strong>Sinh ngày:</strong>6/3/2007", 
+                phone: "<strong>SĐT:</strong>0901096052",				
+                email:"<strong>Email:</strong>huynhngoctu0603＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " ĐẶNG THỊ TUYẾT NHUNG  ", 
+                image: "https://scontent.fsgn3-1.fna.fbcdn.net/v/t39.30808-6/487369557_122156960444369641_2778253701657556706_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=HXhmf8rhOrcQ7kNvgFee1ZF&_nc_oc=AdlRi4z1DCz8NrWYMdpakF3Y8wDgS2WyFI3OO2ZTO9a1Ad1Kq2SdgWJ2vjUydX7d0fY&_nc_zt=23&_nc_ht=scontent.fsgn3-1.fna&_nc_gid=xHWY7PlsF204GF5rZHmmDw&oh=00_AYEdNT_c9xibfAY7RtCCRmKJm8CrOdkJUcr_ywf639t7HQ&oe=67ED6CC5", 
+                date:"<strong>Sinh ngày:</strong>27/1/200", 
+                phone: "<strong>SĐT:</strong>0379788638",				
+                email:"<strong>Email:</strong>dangtuyetnhung2701＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " TRẦN NGUYỄN MINH THƯ  ", 
+                image: "https://scontent.fsgn4-1.fna.fbcdn.net/v/t39.30808-6/487338051_122156960498369641_1708965709469903227_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=iMjzWv4EZ7cQ7kNvgHfcUD7&_nc_oc=AdnpuscNMI6pqWZW05DlKUaZOiC4mtMvly5fftgo9zhYK5cHf7bUmoyBkiZi1FlX_qc&_nc_zt=23&_nc_ht=scontent.fsgn4-1.fna&_nc_gid=AjojQ7OqFCFh7PKE1sFQzg&oh=00_AYHpKenly3CnKh-ezabst9bug54qxWVTmJiXvxBe2xtqeQ&oe=67ED6A6A", 
+                date:"<strong>Sinh ngày:</strong>9/9/2007", 
+                phone: "<strong>SĐT:</strong>0843902209",				
+                email:"<strong>Email:</strong>mtt090907＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " NGUYỄN NGỌC MINH THƯ  ", 
+                image: "https://scontent.fsgn4-1.fna.fbcdn.net/v/t39.30808-6/487462729_122156960522369641_4842394299663482847_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=hPM7QHArQm8Q7kNvgGN1bsx&_nc_oc=AdmfK3du6FSe2cx76ZeTIsAK38Jmo1bmhXthSTo65XyzWwc99_lLDVt9WAwtgz_IaLg&_nc_zt=23&_nc_ht=scontent.fsgn4-1.fna&_nc_gid=J-ArEF5Q5qNupaQXhtkS5g&oh=00_AYGLir-CDAVKHdZGB64d5Ftel5zQYS7JqZpa9AnlofT9MQ&oe=67ED4E29", 
+                date:"<strong>Sinh ngày:</strong>16/10/2007", 
+                phone: "<strong>SĐT:</strong>0783767369",				
+                email:"<strong>Email:</strong>mthu16102007＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " LÊ THỊ PHƯƠNG THẢO  ", 
+                image: "https://scontent.fsgn13-1.fna.fbcdn.net/v/t39.30808-6/486660371_122156960660369641_9054985940717340186_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=DoVCMM4V87wQ7kNvgFX5lEZ&_nc_oc=AdmwqWWNQrhEMKZUCV44LlL6VDNBM2OI8_isFYKEoZV1ZcS7wJ46kS4Lx9yM9Osz4WA&_nc_zt=23&_nc_ht=scontent.fsgn13-1.fna&_nc_gid=74vEYtLnLh0M9w_pDSOJfA&oh=00_AYGPe1kMe-073TxQIArEeU-KU80qCtg9vK4Ts7-DIisvgA&oe=67ED44ED", 
+                date:"<strong>Sinh ngày:</strong>8/7/2007", 
+                phone: "<strong>SĐT:</strong>0783767093",				
+                email:"<strong>Email:</strong>lethiphuongthao08072007＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " NGUYỄN LÊ AN XUÂN  ", 
+                image: "https://scontent.fsgn13-2.fna.fbcdn.net/v/t39.30808-6/487478621_122156960624369641_1319677765527168374_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=OWXgiyf6TS8Q7kNvgFoeFxD&_nc_oc=AdnbgFvXgHiusO-jmhfaybD2JCx2t57K1RFp8md-PU-gyv8sfgrrEXsYN-nkWkjPJak&_nc_zt=23&_nc_ht=scontent.fsgn13-2.fna&_nc_gid=zutq4QxTYnaS-SCB6_os9A&oh=00_AYGdrYvUDfuy0BoQ1QQc5HSIm2KyKet1wDYAm2BJSdijiQ&oe=67ED5E29", 
+                date:"<strong>Sinh ngày:</strong>17/4/2007", 
+                phone: "<strong>SĐT:</strong>0939137125",				
+                email:"<strong>Email:</strong>xuann4917＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " ĐINH TRẦN MAI KHÔI  ", 
+                image: "https://scontent.fsgn4-1.fna.fbcdn.net/v/t39.30808-6/486787325_122156960630369641_8115723898605962678_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=B4DQCiBu_5IQ7kNvgHxpQOv&_nc_oc=Adm7OgqIqTq4C2ikgzoNSElGIH863xBsU_9BAmcflH_pZHSua7gExZhcYRg5eovwQZE&_nc_zt=23&_nc_ht=scontent.fsgn4-1.fna&_nc_gid=5tEQJuWtehletOVV4LhcGg&oh=00_AYFKwZKf79q2E5Yzds2CyKyRKDEEFpY3r88Snk2FC_1Ihw&oe=67ED7897", 
+                date:"<strong>Sinh ngày:</strong>20/2/2007", 
+                phone: "<strong>SĐT:</strong>0967022542",				
+                email:"<strong>Email:</strong>dinhtranmaikhoi＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " PHAN NGUYỄN LAM DUY  ", 
+                image: "https://scontent.fsgn13-1.fna.fbcdn.net/v/t39.30808-6/487327707_122156960780369641_5396688914312424445_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=3NH-x9I7HG8Q7kNvgG0wu0s&_nc_oc=Adn8SF4ZfxKbZk9du5a5h6BlGdfFxFtWGa7l8K94u2d_5SMwFVocF_MWtN2W6cbuWqM&_nc_zt=23&_nc_ht=scontent.fsgn13-1.fna&_nc_gid=VeH0MEeX34cyJnFspUzdHw&oh=00_AYEk1hLk3v351l4D0AVYP4GuwV34ivjtxuTvE3AOyXiIaw&oe=67ED4BFD", 
+                date:"<strong>Sinh ngày:</strong>31/1/2007", 
+                phone: "<strong>SĐT:</strong>0939031419",				
+                email:"<strong>Email:</strong>phannguyenlamduy2019＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " NGUYỄN PHẠM KHẢ HÂN  ", 
+                image: "https://scontent.fsgn4-1.fna.fbcdn.net/v/t39.30808-6/487440390_122156960816369641_9202082049459311068_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=isPzhCStiAwQ7kNvgGYfRMo&_nc_oc=AdnC67CSvXRMcqO_2VqDTX7jPglcSQa3zmW_A_CrNDhmLau6BOoD8s6kNCZ0dU3Ghuo&_nc_zt=23&_nc_ht=scontent.fsgn4-1.fna&_nc_gid=HXijBdg4XuDeU5xVT1neyw&oh=00_AYEIfMAqy0os1NKSfGKEzriSP7nLJMdb5AQSoWwGvDWTgg&oe=67ED7888", 
+                date:"<strong>Sinh ngày:</strong>7/3/2007", 
+                phone: "<strong>SĐT:</strong>0788699308",				
+                email:"<strong>Email:</strong>nguyenphamkhahan73＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " PHAN THỊ THÚY HIỀN  ", 
+                image: "https://scontent.fsgn24-2.fna.fbcdn.net/v/t39.30808-6/487792495_122156960828369641_5420628039875376818_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=OsHy7ew4crgQ7kNvgHw7LHk&_nc_oc=AdllToIzKxRY-VqpA8JG5uX_RBYwyLti1HdHXLvIYMNmwy4GU4EfDoIEhdNpIsyFjUw&_nc_zt=23&_nc_ht=scontent.fsgn24-2.fna&_nc_gid=7mQFdpJNbEVqlJPTs7-NaA&oh=00_AYEBl1LpgIB1ko1qsVmsnFld-6wx0BRcE12kkqDvx1xw2w&oe=67ED70B5", 
+                date:"<strong>Sinh ngày:</strong>24/9/2007", 
+                phone: "<strong>SĐT:</strong>0798565170",				
+                email:"<strong>Email:</strong>thuyhienne0342＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " LÊ NGỌC GIA HÂN  ", 
+                image: "https://scontent.fsgn24-2.fna.fbcdn.net/v/t39.30808-6/487224711_122156960948369641_78504287552877256_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=AsUqwaFlO7sQ7kNvgFXvXx0&_nc_oc=Adk9XtkvPtaRDQHefxAVhofzvlE_SysVu9PW_H-UIIWeuCHxdLcfHZgJDP0CCTdiRMM&_nc_zt=23&_nc_ht=scontent.fsgn24-2.fna&_nc_gid=4TY1yuXphObVWK1q1TYCvg&oh=00_AYEWsMDU_hqA-oRqcCQEb1z0GNUeRJnUlRl1ROdWQcNg5Q&oe=67ED487D", 
+                date:"<strong>Sinh ngày:</strong>22/6/2007", 
+                phone: "<strong>SĐT:</strong>0708582254",				
+                email:"<strong>Email:</strong>nhutle01011981＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " LÊ NGUYỄN NGỌC HÂN  ", 
+                image: "https://scontent.fsgn13-2.fna.fbcdn.net/v/t39.30808-6/486791027_122156961068369641_268844820191438753_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=fCYt527pCAcQ7kNvgGI9_3V&_nc_oc=AdmMTVdqm3iQY6FtWOb3ClwJAmT84uCogsq85fhuzIXsLcSD8ZsDROuYqzDFJJBY2kI&_nc_zt=23&_nc_ht=scontent.fsgn13-2.fna&_nc_gid=xWH8Puhv2hmuzu7V3H6Rzg&oh=00_AYH59Xf8MdtaEod-gUjAqhbRQMvB_K5nBKEhpJltHrE3Qw&oe=67ED5601", 
+                date:"<strong>Sinh ngày:</strong>6/1/2007", 
+                phone: "<strong>SĐT:</strong>0939369589",				
+                email:"<strong>Email:</strong>lenguyenngochan4610＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " NGUYỄN THỊ XUÂN NHI  ", 
+                image: "https://scontent.fsgn24-1.fna.fbcdn.net/v/t39.30808-6/487453457_122156960990369641_84881730572162400_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=EyDZ_jif718Q7kNvgHfe9Wm&_nc_oc=AdnoQOv28EZ0U8YI9fyxwYkNaxTb0jGxBsFy-JX7JBDQ_20z3hs39nIq25GLISCGHYU&_nc_zt=23&_nc_ht=scontent.fsgn24-1.fna&_nc_gid=koogV11tCGI0CzdS-T3gYA&oh=00_AYHPfFs4GEloU73fcD4F6WFWWqeOXBD_h2vuG7XJ90ywVw&oe=67ED765C", 
+                date:"<strong>Sinh ngày:</strong>11/11/2007", 
+                phone: "<strong>SĐT:</strong>0788723524",				
+                email:"<strong>Email:</strong>nguyenthixuannhi1111＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>thủ quỹ"
+            },
+			{ 
+                name: " NGUYỄN THỊ HUỲNH MAI ", 
+                image: "https://scontent.fsgn24-2.fna.fbcdn.net/v/t39.30808-6/487361382_122156961104369641_4288436739367564796_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=hasE89I0A6gQ7kNvgFfDo8y&_nc_oc=AdnQSjacJt6pv000tmsVB1UDxXgtO4GB3u44mM8Wr4PoSg3mcS3NunC9tWmmM8mHP9s&_nc_zt=23&_nc_ht=scontent.fsgn24-2.fna&_nc_gid=dmIvnDINt2shLzq1Lsc7TA&oh=00_AYEPSfLnJcAxBJ1QwZ_N3k2CNKTAR-x18s2FU-bgC6eTQQ&oe=67ED5503", 
+                date:"<strong>Sinh ngày:</strong>28/9/2007", 
+                phone: "<strong>SĐT:</strong>0766975037",				
+                email:"<strong>Email:</strong>hmai38454＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ trưởng"
+            },
+			{ 
+                name: " PHAN THIÊN MAI  ", 
+                image: "https://scontent.fsgn13-2.fna.fbcdn.net/v/t39.30808-6/486618360_122156961182369641_6837377985210737446_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=AsbVJNRCZDEQ7kNvgFdwHHp&_nc_oc=AdlNAPWWdooVCLJ7G9F21PvZoikzB3HA7Wpca4Ku3XfvB2jPQPd2C0-xkMCFPkrNgY4&_nc_zt=23&_nc_ht=scontent.fsgn13-2.fna&_nc_gid=k7u7BHXp_5P57ahHkwozFQ&oh=00_AYHS0znkc9VIhMRhbc37pKokW03tqWvCDk6aaLPUnaQKMw&oe=67ED650E", 
+                date:"<strong>Sinh ngày:</strong>5/12/2007", 
+                phone: "<strong>SĐT:</strong>0888741904",				
+                email:"<strong>Email:</strong>phanthienmaai＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " NGUYỄN BÁ NAM", 
+                image: "https://scontent.fsgn3-1.fna.fbcdn.net/v/t39.30808-6/487207251_122156961224369641_7717647534127899333_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=xkV2QJueR0QQ7kNvgHpNIhP&_nc_oc=AdmX5E3fnR-Tne9EwEdNApx65cvwAPkmCQIdlHcbeG5PzPVtpJFobveI-xTXVci_lxU&_nc_zt=23&_nc_ht=scontent.fsgn3-1.fna&_nc_gid=fyUqkdQiwF9RZSFvVuNCMg&oh=00_AYG_vW0F57gVaC1Y-Qn5_2xef9QLbAYJrf0x8Zu23rXYSw&oe=67ED56E0", 
+                date:"<strong>Sinh ngày:</strong>30/1/2007", 
+                phone: "<strong>SĐT:</strong>0793981158",				
+                email:"<strong>Email:</strong>banamnguyen1990＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " PHẠM NGUYỄN QUỐC VINH ", 
+                image: "https://scontent.fsgn13-2.fna.fbcdn.net/v/t39.30808-6/486691306_122156961260369641_4393258417039038032_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=3JzdOwJ8F3AQ7kNvgFTRbSg&_nc_oc=Adm7ZPLQ4-XTb_eSYiZM-2PCx0MWJzWv7aYioMrk25K9HEguSgQzimTxvYgUtbbc9GQ&_nc_zt=23&_nc_ht=scontent.fsgn13-2.fna&_nc_gid=FMGOA1gxeKsRaL8CI_IEjw&oh=00_AYEO7fhmUylzIbyS0dtd2DSsptRQaYfwvw6R3yOoh-CWzw&oe=67ED56DE", 
+                date:"<strong>Sinh ngày:</strong>28/2/2007", 
+                phone: "<strong>SĐT:</strong>0775889308",				
+                email:"<strong>Email:</strong>vinhpham28022007＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ trưởng"
+            },{ 
+                name: " ĐỔNG TRÍ THIỆN ", 
+                image: "https://scontent.fsgn24-2.fna.fbcdn.net/v/t39.30808-6/486668255_122156961332369641_5181861154707595048_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_ohc=GjhljiH2pu4Q7kNvgFqyi9c&_nc_oc=AdlozsKCv_altHsqslXXesEkSSLNa2mUpLVGhpuqNtfXUAbBQxXkmzz_ecDQD-CmWjw&_nc_zt=23&_nc_ht=scontent.fsgn24-2.fna&_nc_gid=kG7EMDfG6iBxE06piZZFog&oh=00_AYFnwXkYcUx0ccMOFjx3Gb49agdxIJy5K48OQjJLAuP80g&oe=67ED7BC4", 
+                date:"<strong>Sinh ngày:</strong>4/5/2007", 
+                phone: "<strong>SĐT:</strong>0379344301",				
+                email:"<strong>Email:</strong>dongtrithien42＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " HUỲNH MINH TRÍ ", 
+                image: "https://scontent.fsgn24-1.fna.fbcdn.net/v/t39.30808-6/486726463_122156961368369641_8711201349736559421_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=XIgdDXdUdzsQ7kNvgFVAzp5&_nc_oc=Adk4LKs-5DbiVPW9JSmg9JBTg0ACcN408mb2K3rROSbkgKt0Sz1-hahzsiH85XLjt6I&_nc_zt=23&_nc_ht=scontent.fsgn24-1.fna&_nc_gid=ABaDNggCtxz_exf-qD5uJA&oh=00_AYFCtBIxV4ewdsGKqEUQp34jgFy8pcYZd8bKeUXWc6dXKA&oe=67ED6555", 
+                date:"<strong>Sinh ngày:</strong>25/5/2007", 
+                phone: "<strong>SĐT:</strong>0939113191",				
+                email:"<strong>Email:</strong>tri77800707＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },{ 
+                name: " PHẠM TRẦN HOÀI KHÁNH ", 
+                image: "https://scontent.fsgn13-2.fna.fbcdn.net/v/t39.30808-6/487139209_122156961416369641_8133100363708829067_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=nAytWsf23VoQ7kNvgEqCo59&_nc_oc=AdlmgCsNQE5j3Uo0p5yLAYIGUDT1Jd5boJ-4jsZ3_0oCSeTpwXHspTSzKoa2Jhz7r44&_nc_zt=23&_nc_ht=scontent.fsgn13-2.fna&_nc_gid=V19lW4h080p5JsornDtYTA&oh=00_AYG3wpaVZFtA3L-qwMJkPYBRMRo1fOSROTmaOUfepuCk3w&oe=67ED67A7", 
+                date:"<strong>Sinh ngày:</strong>30/9/2007", 
+                phone: "<strong>SĐT:</strong>0386094473",				
+                email:"<strong>Email:</strong>phamtranhoaikhanh＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " PHAN TRUNG TIẾN ", 
+                image: "https://scontent.fsgn24-1.fna.fbcdn.net/v/t39.30808-6/486870251_122156961488369641_7813135372304555414_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=rbqgxITnzHwQ7kNvgFT71yg&_nc_oc=Adly2EJZLSjGcHj4NQvLHYz3xwUquALvtoEttHSVHjumoKW1qjM1RGTWYzKR7ZfKoeM&_nc_zt=23&_nc_ht=scontent.fsgn24-1.fna&_nc_gid=KpnbGvdvgJ23Jn8rdg9BMw&oh=00_AYEuKsY1Gi8zbjqsg3R2-ihKauO13mH3DoIZsvuy34E6ng&oe=67ED6E90", 
+                date:"<strong>Sinh ngày:</strong>17/6/2007", 
+                phone: "<strong>SĐT:</strong>0794368176",				
+                email:"<strong>Email:</strong>phantrtien1706＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " ĐOÀN NGUYỄN PHƯƠNG DUY ", 
+                image: "https://scontent.fsgn4-1.fna.fbcdn.net/v/t39.30808-6/487409623_122156961548369641_491417252559246110_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=m6Yfgr4VhdYQ7kNvgEwpe3B&_nc_oc=AdlyRaz3i3EeQwsG7GsC0E-RggsL_lsIbq_eWxRgmx15Dj_nG5HCx4Z0hw0RKPBStkQ&_nc_zt=23&_nc_ht=scontent.fsgn4-1.fna&_nc_gid=sy75JdvJO3HjfvYv1xeiwQ&oh=00_AYHuziHy_tT5yVayOa0AUqYLD0u8YNnrJhxrEdmFcHXImw&oe=67ED7AD4", 
+                date:"<strong>Sinh ngày:</strong>30/1/2007", 
+                phone: "<strong>SĐT:</strong>0766893433",				
+                email:"<strong>Email:</strong>pd967548＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " TRƯƠNG HOÀNG ÂN ", 
+                image: "https://scontent.fsgn4-1.fna.fbcdn.net/v/t39.30808-6/487410595_122156961602369641_3353244994984283644_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Y9dh__0EnW0Q7kNvgEZt4C3&_nc_oc=Adns8MNjeXjA_xBthqXLLmnRZhDqZQ-mq_nD3Kc1DRVbCXxms47wvUgI6yTjcFmCUts&_nc_zt=23&_nc_ht=scontent.fsgn4-1.fna&_nc_gid=1E2L0Gxky98wF3BE3EsVOA&oh=00_AYEbYNkHvK1WdMfNs3VyJfbT25JNv895HeHiqigG0lq8hA&oe=67ED5C2B", 
+                date:"<strong>Sinh ngày:</strong>25/5/2007", 
+                phone: "<strong>SĐT:</strong>0939170636",				
+                email:"<strong>Email:</strong>truonghoangandmx＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ trưởng "
+            },
+			{ 
+                name: " CHÂU HUỲNH ANH KHÔI ", 
+                image: "https://scontent.fsgn3-1.fna.fbcdn.net/v/t39.30808-6/486997037_122156961668369641_8178156383277757099_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=KxtEtVLbuxUQ7kNvgGHHdWq&_nc_oc=Adk7QOkJwXSGoNp74ZyqEa8U32SXkoEtjeGbqwY-xpQVsJkp_FD31oy84AyywtW18LM&_nc_zt=23&_nc_ht=scontent.fsgn3-1.fna&_nc_gid=915R5VRtodOLWiR2S5oNgg&oh=00_AYESEWWsjTKRKKBk3DX85mH6SqHvYu5JKwSJfv662w49kw&oe=67ED632D", 
+                date:"<strong>Sinh ngày:</strong>29/10/2007", 
+                phone: "<strong>SĐT:</strong>0819433195",				
+                email:"<strong>Email:</strong>chaukenken07＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>lớp trưởng"
+            },
+			{ 
+                name: " TRẦN GIA BẢO ", 
+                image: "https://scontent.fsgn13-2.fna.fbcdn.net/v/t39.30808-6/486645358_122156961704369641_5494180095659190491_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=n3NvBGN69FoQ7kNvgFLFFlW&_nc_oc=AdmRObX3HhEU1WHIYD6Jh4VYADXGSW9DgdUAC8mMTJPGt-f34FtWGPT6dbTXZAv8sw4&_nc_zt=23&_nc_ht=scontent.fsgn13-2.fna&_nc_gid=7E6xzja6x0wqZqLD-N-0Pg&oh=00_AYFm9O6lSI7G3C2c0TqlVFlUhF3HKVgAecIXSrpFehiPMw&oe=67ED6AB3", 
+                date:"<strong>Sinh ngày:</strong>12/5/2007", 
+                phone: "<strong>SĐT:</strong>0907437631",				
+                email:"<strong>Email:</strong>trangiabao1252007＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " TRƯƠNG THUẬN THÀNH  ", 
+                image: "https://scontent.fsgn24-2.fna.fbcdn.net/v/t39.30808-6/486833556_122156961788369641_7619544587626851014_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=5MLlVGho-0sQ7kNvgEXhcc7&_nc_oc=AdlJMZ2gfEeopp0wMY_VHIr3iYVyo4a7GvR9h0bnUzOBhGn6L9lAqKgs4Z3BzuOrt34&_nc_zt=23&_nc_ht=scontent.fsgn24-2.fna&_nc_gid=RemVayKMliBOV4jyRIaDWA&oh=00_AYF7B8LD2bV3IGC2UQeeOz7Xd_ydf58CtkzGytUA0d4k7g&oe=67ED71E5", 
+                date:"<strong>Sinh ngày:</strong>20/11/2007", 
+                phone: "<strong>SĐT:</strong>0706769879",				
+                email:"<strong>Email:</strong>tranthihuynhmai78＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>lớp phó trật tự"
+            },
+			{ 
+                name: " TĂNG TIẾN ĐẠT ", 
+                image: "https://scontent.fsgn24-1.fna.fbcdn.net/v/t39.30808-6/486715219_122156961824369641_77441869500870380_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=JkQboq-_VfwQ7kNvgH8QENu&_nc_oc=AdmWMZz6wMV5kS4XqDV0dwMGDWPqX_ZY8EILXMHV-NjvNmDJoB2aHogo-q50zLE9SJ0&_nc_zt=23&_nc_ht=scontent.fsgn24-1.fna&_nc_gid=eFHePz8nnA493gQ0REj5Gw&oh=00_AYEfYpLNhpMDdb3I6qREgVrViT-ymjAey31OUdDdGa2UVw&oe=67ED6E12", 
+                date:"<strong>Sinh ngày:</strong>19/12/2007", 
+                phone: "<strong>SĐT:</strong>0933089767",				
+                email:"<strong>Email:</strong>dt489412＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " TRẦN KHẢI ĐỊNH ", 
+                image: "https://scontent.fsgn3-1.fna.fbcdn.net/v/t39.30808-6/487062469_122156961884369641_1951289442228018487_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=2lQ253v7P9kQ7kNvgFzmtw1&_nc_oc=AdlvxTpQI32dws4agXjHMp90INTWrhPWCmMS7fjTyj6z0SNif-v1CGTaxohfeZsbkNw&_nc_zt=23&_nc_ht=scontent.fsgn3-1.fna&_nc_gid=Yo2pmLLZPELW0rmYLeTpWQ&oh=00_AYHyJ2yXWQx-f0yosvNe1--XhGaYn52kZJnOJC0blRqh_A&oe=67ED5323", 
+                date:"<strong>Sinh ngày:</strong>6/1/2007", 
+                phone: "<strong>SĐT:</strong>0987402719",				
+                email:"<strong>Email:</strong>khaidinhtran6＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " PHẠM MINH QUÂN ", 
+                image: "https://scontent.fsgn24-2.fna.fbcdn.net/v/t39.30808-6/486608214_122156961956369641_7897751045621782424_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=yDE-XwNz95MQ7kNvgGWR5sn&_nc_oc=AdmDXkmVJRYOKA9Y-Z-j9jUUPtAW_Bc1V-pKUz_uKQFr-bbBqxebZwuwCPosW7QSZWc&_nc_zt=23&_nc_ht=scontent.fsgn24-2.fna&_nc_gid=2aqPUI7gyvNVieqddXIXhQ&oh=00_AYFYuKhBHyHoK8Fwc_C9vB5uFtdk3iJvozP5ql2pd5yW9A&oe=67ED784C", 
+                date:"<strong>Sinh ngày:</strong>25/2/2007", 
+                phone: "<strong>SĐT:</strong>0843120100",				
+                email:"<strong>Email:</strong>minhquanpham829＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>lớp phó lao động"
+            },
+			{ 
+                name: " DƯƠNG DĨ KHANG ", 
+                image: "https://scontent.fsgn13-1.fna.fbcdn.net/v/t39.30808-6/487390730_122156961992369641_8485782053984957784_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Kez02f0K__kQ7kNvgHTyKZD&_nc_oc=AdkNbd2Xn6L2-oYNU3WcI1VeLYes3pzJYP9dqfYNVFRhpepysZX-PxiQJwYudmH2hH0&_nc_zt=23&_nc_ht=scontent.fsgn13-1.fna&_nc_gid=LvhcsWA0XrebvEfpuDsf-Q&oh=00_AYGkFikJ0hO4KnVAVcj0tQJgEbqtiJS5kMUYu1ytKsz2_w&oe=67ED65F9", 
+                date:"<strong>Sinh ngày:</strong>15/2/2007", 
+                phone: "<strong>SĐT:</strong>0938463046",				
+                email:"<strong>Email:</strong>dikhang022＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ trưởng"
+            },
+			{ 
+                name: " NGUYỄN HŨU TÌNH ", 
+                image: "https://scontent.fsgn3-1.fna.fbcdn.net/v/t39.30808-6/486760955_122156962034369641_8620160275748771187_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=WrMM0SqpPgoQ7kNvgG0sPET&_nc_oc=AdkwIJGTSrk7SBTIZPRQkcVuLW8Pk0nP5iz8JC80z1EU27wr_thSVnT06GaJdZm8dgk&_nc_zt=23&_nc_ht=scontent.fsgn3-1.fna&_nc_gid=2a3j0orYuKrr6m_CrNLPxQ&oh=00_AYHMSF_5IHq-5ZMpuUCJ8dLX2Zp8YPcboqjLSaHuGOz5BQ&oe=67ED4AD1", 
+                date:"<strong>Sinh ngày:</strong>30/11/2007", 
+                phone: "<strong>SĐT:</strong>0384666165",				
+                email:"<strong>Email:</strong>huutinnguyen231＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			{ 
+                name: " LÊ NGUYỄN HOÀNG HUY ", 
+                image: "https://scontent.fsgn4-1.fna.fbcdn.net/v/t39.30808-6/487377944_122156962112369641_2244592430633631633_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=bp0JrUVNIt4Q7kNvgGez9JL&_nc_oc=AdnrtV_5G-C56b8K6VxQsuUPJM9Vizcsw0wwgwA36HoIVwgIPKoPS16cZBQ8j5kUlec&_nc_zt=23&_nc_ht=scontent.fsgn4-1.fna&_nc_gid=kyheCsxYHUa3EjjmYcBHow&oh=00_AYGoVNgOCrza_ZuGg4BL98lxCvGKES2K_J8pNLsfIclUmA&oe=67ED4834", 
+                date:"<strong>Sinh ngày:</strong>1/1/2007", 
+                phone: "<strong>SĐT:</strong>0853717627",				
+                email:"<strong>Email:</strong>hhuy011206＠gmail.com", 
+			   description:"<strong>Chức vụ :</strong>tổ viên"
+            },
+			
+        ];
+        function displayStudents(list) {
+            const studentList = document.getElementById("studentList");
+            studentList.innerHTML = "";
+            list.forEach(student => {
+                const card = document.createElement("div");
+                card.classList.add("student-card");
+                card.innerHTML = `
+                    <img src="${student.image}" alt="${student.name}">
+                    <h3>${student.name}</h3>
+                    <p>${student.date}</p>
+					  <p> ${student.phone}</p>
+                    <p> ${student.email}</p>				  
+                    <p>${student.description}</p>		
+                   
+                `;
+                studentList.appendChild(card);
+            });
+        }
+
+        function searchStudents() {
+            const query = document.getElementById("search").value.toLowerCase();
+            const filteredStudents = students.filter(student => student.name.toLowerCase().includes(query));
+            displayStudents(filteredStudents);
+        }
+
+        displayStudents(students);
+    </script>
+	  <footer>
+	   <h3 id="lien-he"> THÔNG TIN LIÊN HỆ </h3>
+	
+        <div class="contact-info">
+            <p><strong>Địa chỉ:</strong> ĐT851, Long Thuận, Long Hậu, Lai Vung, Đồng Tháp</p>
+            <p><strong>Điện thoại:</strong> 0769308243</p>
+            <p><strong>Email:</strong>nguyenthihongtho44＠gmail.com</p>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.instagram.com/sleeping12a1?igsh=ZWxvbTdvamM2NWFn" target="_blank">Instagram</a>
+            <a href="https://youtube.com/@sleepingaone?si=vp-vaHdSEEnpgf-1" target="_blank">YouTube</a>
+        </div>
+        <p>&copy; 2025 Made by Nguyễn Thị Hồng Thơ</p>
+     </footer>
+</body>
+</html>
